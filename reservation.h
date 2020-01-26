@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 #include <QDate>
-#include <string>
+#include <QString>
 
 using namespace std;
 
@@ -14,8 +14,8 @@ public:
     Reservation(); //Constructor
 
     //Getters and Setters
-    string name() const;
-    void setName(const string &name);
+    QString name() const;
+    void setName(const QString &name);
     int type_size() const;
     void setType_size(int type_size);
     int type_view() const;
@@ -32,7 +32,7 @@ public:
     void setParking(bool parking);
 
 private: //Member variables
-    string _name; //Reservation name
+    QString _name; //Reservation name
     int _type_size; //2 Queen or 1 King
     int _type_view; //Standard or Atrium
 

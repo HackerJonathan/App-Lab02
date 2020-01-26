@@ -1,11 +1,24 @@
 #include "reservation.h"
 
+//Default Constructor
+Reservation::Reservation()
+{
+    setName("");
+    setType_size(0);
+    setType_view(0);
+    setDate(QDate::currentDate());
+    setLength(1);
+    setNum_adults(1);
+    setNum_children(0);
+    setParking(false);
+}
+
 //Getters and Setters Definitions
-string Reservation::name() const
+QString Reservation::name() const
 {
     return _name;
 }
-void Reservation::setName(const string &name)
+void Reservation::setName(const QString &name)
 {
     _name = name;
 }

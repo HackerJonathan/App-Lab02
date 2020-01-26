@@ -23,5 +23,41 @@ Reservation myReservation;
 void MainWindow::on_nameTextEdit_textChanged()
 {
     myReservation.setName(ui->nameTextEdit->toPlainText());
-    ui->testText->setText(myReservation.name());
+    ui->testText->setText(myReservation.name()); //Outputting to test to check
+}
+
+void MainWindow::on_radioSizeA_clicked(bool checked)
+{
+    if (checked)
+    {
+        myReservation.setType_size(0);
+        ui->testText->setText(QString::number(myReservation.type_size()));
+    }
+}
+
+void MainWindow::on_radioSizeB_clicked(bool checked)
+{
+    if (checked)
+    {
+        myReservation.setType_size(1);
+        ui->testText->setText(QString::number(myReservation.type_size()));
+    }
+}
+
+void MainWindow::on_radioViewA_clicked(bool checked)
+{
+    if (checked)
+    {
+        myReservation.setType_view(0);
+        ui->testText->setText(QString::number(myReservation.type_view()));
+    }
+}
+
+void MainWindow::on_radioViewB_clicked(bool checked)
+{
+    if (checked)
+    {
+        myReservation.setType_view(1);
+        ui->testText->setText(QString::number(myReservation.type_view()));
+    }
 }

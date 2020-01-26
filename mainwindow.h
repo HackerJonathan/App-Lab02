@@ -18,6 +18,14 @@ public:
 private slots:
     void on_nameTextEdit_textChanged();
 
+    void on_radioSizeA_clicked(bool checked);
+
+    void on_radioSizeB_clicked(bool checked);
+
+    void on_radioViewA_clicked(bool checked);
+
+    void on_radioViewB_clicked(bool checked);
+
 private:
     Ui::MainWindow *ui;
 };

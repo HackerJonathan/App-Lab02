@@ -20,7 +20,7 @@
       <x>10</x>
       <y>10</y>
       <width>771</width>
-      <height>521</height>
+      <height>471</height>
      </rect>
     </property>
     <property name="currentIndex">
@@ -37,21 +37,117 @@
        </rect>
       </property>
      </widget>
-     <widget class="QLabel" name="testText">
+     <widget class="QGroupBox" name="groupSize">
       <property name="geometry">
        <rect>
-        <x>250</x>
-        <y>390</y>
-        <width>181</width>
-        <height>41</height>
+        <x>160</x>
+        <y>110</y>
+        <width>251</width>
+        <height>121</height>
        </rect>
       </property>
-      <property name="text">
-       <string>Null</string>
+      <property name="title">
+       <string>Room Size</string>
       </property>
+      <widget class="QRadioButton" name="radioSizeA">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>201</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>2 Queen Beds (4 People)</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioSizeB">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>50</y>
+         <width>231</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>1 King Bed (3 People)</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>240</y>
+        <width>251</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Room View</string>
+      </property>
+      <widget class="QRadioButton" name="radioViewA">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>201</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Standard View</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioViewB">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>60</y>
+         <width>201</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Atrium View</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
      </widget>
     </widget>
     <widget class="QWidget" name="pageB"/>
+   </widget>
+   <widget class="QLabel" name="testText">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>510</y>
+      <width>111</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="text">
+     <string>Null</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

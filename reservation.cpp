@@ -18,6 +18,7 @@ QString Reservation::name() const
 {
     return _name;
 }
+//HI
 void Reservation::setName(const QString &name)
 {
     _name = name;

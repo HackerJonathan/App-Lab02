@@ -26,6 +26,8 @@ private slots:
 
     void on_radioViewB_clicked(bool checked);
 
+    void on_startDate_userDateChanged(const QDate &date);
+
 private:
     Ui::MainWindow *ui;
 };

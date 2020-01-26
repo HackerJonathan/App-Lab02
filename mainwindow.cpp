@@ -19,6 +19,9 @@ MainWindow::~MainWindow()
 //Declaration of our reservation (used in the app).
 Reservation myReservation;
 
+//ui->dateEdit->setDate(QDate::currentDate());
+//ui->dateEdit->setDate(QDate::currentDate())
+
 //Updating _name based on input in the name textbox.
 void MainWindow::on_nameTextEdit_textChanged()
 {
@@ -60,4 +63,10 @@ void MainWindow::on_radioViewB_clicked(bool checked)
         myReservation.setType_view(1);
         ui->testText->setText(QString::number(myReservation.type_view()));
     }
+}
+
+void MainWindow::on_startDate_userDateChanged(const QDate &date)
+{
+    myReservation.setDate(date);
+    ui->testText->setText((myReservation.date()).toString());
 }

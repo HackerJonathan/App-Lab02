@@ -25,12 +25,12 @@ private slots:
     void on_lengthBox_valueChanged(int arg1);
     void on_numAdultsBox_valueChanged(int arg1);
     void on_numChildrenBox_valueChanged(int arg1);
-
     void on_parkingCheck_stateChanged(int arg1);
 
 private:
     Ui::MainWindow *ui;
 
     void updatePeopleBounds();
+    void updateCost();
 };
 #endif // MAINWINDOW_H

@@ -19,6 +19,8 @@ MainWindow::MainWindow(QWidget *parent)
     //Initializing various defaults.
     ui->startDate->setDate(QDate::currentDate());
     ui->startDate->setDateRange(QDate::currentDate(), QDate::currentDate().addYears(1));
+
+    updateCost();
 }
 
 MainWindow::~MainWindow()
@@ -41,6 +43,7 @@ void MainWindow::on_radioSizeA_clicked(bool checked)
         myReservation.setType_size(sizeQueen);
         updatePeopleBounds();
         ui->testText->setText(QString::number(myReservation.type_size()));
+        updateCost();
     }
 }
 void MainWindow::on_radioSizeB_clicked(bool checked)
@@ -50,6 +53,7 @@ void MainWindow::on_radioSizeB_clicked(bool checked)
         myReservation.setType_size(sizeKing);
         updatePeopleBounds();
         ui->testText->setText(QString::number(myReservation.type_size()));
+        updateCost();
     }
 }
 void MainWindow::on_radioViewA_clicked(bool checked)
@@ -58,6 +62,7 @@ void MainWindow::on_radioViewA_clicked(bool checked)
     {
         myReservation.setType_view(viewStandard);
         ui->testText->setText(QString::number(myReservation.type_view()));
+        updateCost();
     }
 }
 void MainWindow::on_radioViewB_clicked(bool checked)
@@ -66,6 +71,7 @@ void MainWindow::on_radioViewB_clicked(bool checked)
     {
         myReservation.setType_view(viewAtrium);
         ui->testText->setText(QString::number(myReservation.type_view()));
+        updateCost();
     }
 }
 
@@ -79,6 +85,7 @@ void MainWindow::on_lengthBox_valueChanged(int arg1)
 {
     myReservation.setLength(arg1);
     ui->testText->setText(QString::number(myReservation.length()));
+    updateCost();
 }
 
 //Numbers of people for the reservation.
@@ -120,4 +127,12 @@ void MainWindow::on_parkingCheck_stateChanged(int arg1)
 {
     myReservation.setParking(arg1);
     ui->testText->setText(QString::number(myReservation.parking()));
+    updateCost();
+}
+
+//Cost Calculations
+void MainWindow::updateCost()
+{
+    int cost = myReservation.calculateCost();
+    ui->costText->setText("$" + QString::number(cost) + " US");
 }

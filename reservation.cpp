@@ -13,6 +13,32 @@ Reservation::Reservation()
     setParking(false);
 }
 
+double Reservation::calculateCost()
+{
+    double cost = 0;
+
+    double rate = 0; //Get the rate based on room type.
+    if (_type_size == sizeQueen)
+    {
+        if (_type_view == viewStandard) { rate = costQS; }
+        else { rate = costQA; }
+    }
+    else
+    {
+        if (_type_view == viewStandard) { rate = costKS; }
+        else { rate = costKA; }
+    }
+
+    //Calculate cost based on input factors.
+    cost += (rate * _length) * (1 + taxRate);
+    if (_parking)
+    {
+        cost += (costParking * _length);
+    }
+
+    return cost;
+}
+
 //Getters and Setters Definitions
 QString Reservation::name() const
 {

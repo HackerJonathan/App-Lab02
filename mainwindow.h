@@ -17,18 +17,20 @@ public:
 
 private slots:
     void on_nameTextEdit_textChanged();
-
     void on_radioSizeA_clicked(bool checked);
-
     void on_radioSizeB_clicked(bool checked);
-
     void on_radioViewA_clicked(bool checked);
-
     void on_radioViewB_clicked(bool checked);
-
     void on_startDate_userDateChanged(const QDate &date);
+    void on_lengthBox_valueChanged(int arg1);
+    void on_numAdultsBox_valueChanged(int arg1);
+    void on_numChildrenBox_valueChanged(int arg1);
+
+    void on_parkingCheck_stateChanged(int arg1);
 
 private:
     Ui::MainWindow *ui;
+
+    void updatePeopleBounds();
 };
 #endif // MAINWINDOW_H

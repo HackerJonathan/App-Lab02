@@ -7,6 +7,12 @@
 
 using namespace std;
 
+//Constants for different room types.
+const int sizeQueen = 0;
+const int sizeKing = 1;
+const int viewStandard = 0;
+const int viewAtrium = 1;
+
 //Reservation class declaration.
 class Reservation
 {

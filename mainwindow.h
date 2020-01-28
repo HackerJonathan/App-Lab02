@@ -27,10 +27,15 @@ private slots:
     void on_numChildrenBox_valueChanged(int arg1);
     void on_parkingCheck_stateChanged(int arg1);
 
+    void on_nextButtonA_clicked();
+
+    void on_backButtonB_clicked();
+
 private:
     Ui::MainWindow *ui;
 
     void updatePeopleBounds();
     void updateCost();
+    void updateCostLabels();
 };
 #endif // MAINWINDOW_H

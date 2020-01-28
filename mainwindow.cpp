@@ -19,6 +19,7 @@ MainWindow::MainWindow(QWidget *parent)
     //Initializing various defaults.
     ui->startDate->setDate(QDate::currentDate());
     ui->startDate->setDateRange(QDate::currentDate(), QDate::currentDate().addYears(1));
+    ui->windowStack->setCurrentIndex(0);
 
     updateCost();
 }
@@ -28,11 +29,16 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-//Updating _name based on input in the name textbox.
+//------------------------------------------------------------------------- PAGE ONE
+
+//Reservation name.
 void MainWindow::on_nameTextEdit_textChanged()
 {
     myReservation.setName(ui->nameTextEdit->toPlainText());
     ui->testText->setText(myReservation.name());
+
+    //Enable/disable next button based on name input.
+    ui->nextButtonA->setEnabled(myReservation.name() != "");
 }
 
 //Room type settings.
@@ -75,7 +81,7 @@ void MainWindow::on_radioViewB_clicked(bool checked)
     }
 }
 
-//Date/Length settings
+//Date and length settings.
 void MainWindow::on_startDate_userDateChanged(const QDate &date)
 {
     myReservation.setDate(date);
@@ -122,7 +128,7 @@ void MainWindow::updatePeopleBounds()
     ui->numChildrenBox->setMaximum(maxPeople - numAdults);
 }
 
-//Parking checkbox
+//Parking checkbox.
 void MainWindow::on_parkingCheck_stateChanged(int arg1)
 {
     myReservation.setParking(arg1);
@@ -130,9 +136,31 @@ void MainWindow::on_parkingCheck_stateChanged(int arg1)
     updateCost();
 }
 
-//Cost Calculations
+//Cost calculations.
 void MainWindow::updateCost()
 {
     int cost = myReservation.calculateCost();
     ui->costText->setText("$" + QString::number(cost) + " US");
+}
+
+//Moving to the second page.
+//Also updates cost summary labels.
+void MainWindow::on_nextButtonA_clicked()
+{
+    ui->windowStack->setCurrentIndex(1);
+    ui->labelName->setText(myReservation.name());
+    ui->labelChargeRoom->setText(QString::number(myReservation.chargeRoom()));
+    ui->labelChargeTaxes->setText(QString::number(myReservation.chargeTaxes()));
+    ui->labelChargeParking->setText(QString::number(myReservation.chargeParking()));
+    ui->labelChargeResort->setText(QString::number(myReservation.chargeResort()));
+    ui->labelChargeTotal->setText(QString::number(myReservation.calculateCost()));
+}
+
+//------------------------------------------------------------------------- PAGE TWO
+
+
+//Back to the first page.
+void MainWindow::on_backButtonB_clicked()
+{
+    ui->windowStack->setCurrentIndex(0);
 }

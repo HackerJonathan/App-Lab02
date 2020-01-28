@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="pageA">
      <widget class="QPlainTextEdit" name="nameTextEdit">
@@ -208,8 +208,232 @@
        <string>Parking</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="nextButtonA">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>430</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Next</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="costText">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>430</y>
+        <width>111</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="text">
+       <string>Null</string>
+      </property>
+     </widget>
     </widget>
-    <widget class="QWidget" name="pageB"/>
+    <widget class="QWidget" name="pageB">
+     <widget class="QPushButton" name="backButtonB">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>430</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>40</y>
+        <width>281</width>
+        <height>281</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="labelName_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>121</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Reservation Name:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelName">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>10</y>
+         <width>121</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Reservation Name:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelChargeRoom_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>50</y>
+         <width>111</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Room Charges:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelChargeTaxes_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>90</y>
+         <width>111</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Taxes:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelChargeParking_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>130</y>
+         <width>101</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Parking Fee:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelChargeTotal_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>210</y>
+         <width>91</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Total Cost:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelChargeRoom">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>50</y>
+         <width>111</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Room Charges:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelChargeTaxes">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>90</y>
+         <width>111</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Taxes:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelChargeParking">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>130</y>
+         <width>101</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Parking Fee:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelChargeTotal">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>210</y>
+         <width>91</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Total Cost:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelChargeResort">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>170</y>
+         <width>101</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Resort Fee:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelChargeResort_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>170</y>
+         <width>101</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Resort Fee:</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
     <widget class="QWidget" name="pageC"/>
    </widget>
    <widget class="QLabel" name="testText">
@@ -217,28 +441,6 @@
      <rect>
       <x>670</x>
       <y>510</y>
-      <width>111</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="autoFillBackground">
-     <bool>true</bool>
-    </property>
-    <property name="text">
-     <string>Null</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="costText">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>500</y>
       <width>111</width>
       <height>20</height>
      </rect>

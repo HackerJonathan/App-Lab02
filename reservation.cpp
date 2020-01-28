@@ -13,10 +13,13 @@ Reservation::Reservation()
     setParking(false);
 }
 
+//Cost Calculations
 double Reservation::calculateCost()
 {
-    double cost = 0;
-
+    return chargeRoom() + chargeTaxes() + chargeParking() + chargeResort();
+}
+double Reservation::chargeRoom()
+{
     double rate = 0; //Get the rate based on room type.
     if (_type_size == sizeQueen)
     {
@@ -30,13 +33,23 @@ double Reservation::calculateCost()
     }
 
     //Calculate cost based on input factors.
-    cost += (rate * _length) * (1 + taxRate);
+    return rate * _length;
+}
+double Reservation::chargeTaxes()
+{
+    return chargeRoom() * taxRate;
+}
+double Reservation::chargeParking()
+{
     if (_parking)
     {
-        cost += (costParking * _length);
+        return costParking * _length;
     }
-
-    return cost;
+    return 0.00;
+}
+double Reservation::chargeResort()
+{
+    return costResort * _length;
 }
 
 //Getters and Setters Definitions

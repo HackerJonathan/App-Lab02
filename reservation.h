@@ -19,6 +19,7 @@ const double costKS = 290;
 const double costKA = 350;
 const double taxRate = 0.15;
 const double costParking = 12.75;
+const double costResort = 15.00;
 
 //Reservation class declaration.
 class Reservation
@@ -28,6 +29,10 @@ public:
 
     //Methods
     double calculateCost();
+    double chargeRoom();
+    double chargeTaxes();
+    double chargeParking();
+    double chargeResort();
 
     //Getters and Setters
     QString name() const;

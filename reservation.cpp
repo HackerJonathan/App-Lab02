@@ -52,6 +52,38 @@ double Reservation::chargeResort()
     return costResort * _length;
 }
 
+//Printing reservation summary.
+QString Reservation::printSummary()
+{
+    //Getting description of room based on options.
+    QString roomDescription;
+    if (_type_size == sizeQueen)
+    {
+       roomDescription = "an atrium 2-Queen room.";
+       if (_type_view == viewStandard)
+       {
+           roomDescription = "a standard 2-Queen room.";
+       }
+    }
+    else
+    {
+        roomDescription = "an atrium 1-King room.";
+        if (_type_view == viewStandard)
+        {
+            roomDescription = "a standard 1-King room.";
+        }
+    }
+
+    //Building the output string.
+    QString output = "You have reserved with the name: " + _name;
+    output += "\n--- Starting " + this->date().toString() + " for " + QString::number(length()) + " day.";
+    output += "\n--- Staying in " + roomDescription;
+    output += "\n--- With " + QString::number(num_adults()) + " adults and " + QString::number(num_children()) + " children.";
+    output += "\n--- $" + QString::number(calculateCost()) + " paid with credit card: XXXX";
+
+    return output;
+}
+
 //Getters and Setters Definitions
 QString Reservation::name() const
 {

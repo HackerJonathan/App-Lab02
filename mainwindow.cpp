@@ -2,7 +2,7 @@
 #include "ui_mainwindow.h"
 #include "reservation.h"
 
-#include <cmath>
+#include <QMessageBox>
 
 using namespace std;
 
@@ -158,9 +158,33 @@ void MainWindow::on_nextButtonA_clicked()
 
 //------------------------------------------------------------------------- PAGE TWO
 
-
 //Back to the first page.
 void MainWindow::on_backButtonB_clicked()
 {
     ui->windowStack->setCurrentIndex(0);
+}
+
+//Paying with credit card info.
+void MainWindow::on_payButtonB_clicked()
+{
+    //CHECKS STILL TO DO:
+    //  Only enable button when all information is filled in.
+    //  Alternate message if expiration date is before current date.
+    //  Alternate message if invalid credit card number.
+
+    QMessageBox msgBox;
+    msgBox.setText("Payment recieved!\n\nTotal Cost: $" + QString::number(myReservation.calculateCost()));
+    msgBox.setWindowTitle(" ");
+    msgBox.exec();
+
+    ui->windowStack->setCurrentIndex(2);
+    ui->labelSummary->setText(myReservation.printSummary());
+}
+
+//------------------------------------------------------------------------- PAGE THREE
+
+
+void MainWindow::on_buttonExit_clicked()
+{
+    QApplication::quit();
 }

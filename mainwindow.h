@@ -31,6 +31,10 @@ private slots:
 
     void on_backButtonB_clicked();
 
+    void on_payButtonB_clicked();
+
+    void on_buttonExit_clicked();
+
 private:
     Ui::MainWindow *ui;
 

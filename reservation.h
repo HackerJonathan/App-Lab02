@@ -33,6 +33,7 @@ public:
     double chargeTaxes();
     double chargeParking();
     double chargeResort();
+    QString printSummary();
 
     //Getters and Setters
     QString name() const;

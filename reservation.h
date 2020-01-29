@@ -7,11 +7,33 @@
 
 using namespace std;
 
+//Constants for different room types.
+const int sizeQueen = 0;
+const int sizeKing = 1;
+const int viewStandard = 0;
+const int viewAtrium = 1;
+
+const double costQS = 284;
+const double costQA = 325;
+const double costKS = 290;
+const double costKA = 350;
+const double taxRate = 0.15;
+const double costParking = 12.75;
+const double costResort = 15.00;
+
 //Reservation class declaration.
 class Reservation
 {
 public:
     Reservation(); //Constructor
+
+    //Methods
+    double calculateCost();
+    double chargeRoom();
+    double chargeTaxes();
+    double chargeParking();
+    double chargeResort();
+    QString printSummary();
 
     //Getters and Setters
     QString name() const;

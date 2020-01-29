@@ -24,16 +24,23 @@ public:
 
 private slots:
     void on_nameTextEdit_textChanged();
-
     void on_radioSizeA_clicked(bool checked);
-
     void on_radioSizeB_clicked(bool checked);
-
     void on_radioViewA_clicked(bool checked);
-
     void on_radioViewB_clicked(bool checked);
-
     void on_startDate_userDateChanged(const QDate &date);
+    void on_lengthBox_valueChanged(int arg1);
+    void on_numAdultsBox_valueChanged(int arg1);
+    void on_numChildrenBox_valueChanged(int arg1);
+    void on_parkingCheck_stateChanged(int arg1);
+
+    void on_nextButtonA_clicked();
+
+    void on_backButtonB_clicked();
+
+    void on_payButtonB_clicked();
+
+    void on_buttonExit_clicked();
 
     void on_visaButton_clicked();
 
@@ -45,5 +52,9 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+
+    void updatePeopleBounds();
+    void updateCost();
+    void updateCostLabels();
 };
 #endif // MAINWINDOW_H

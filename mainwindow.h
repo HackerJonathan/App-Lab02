@@ -2,10 +2,17 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QString>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
+
+int cardType = 1;
+int cardVisa = 1;
+int cardMaster = 2;
+int cardAmEx = 3;
+int cardDiscover = 4;
 
 class MainWindow : public QMainWindow
 {
@@ -34,6 +41,14 @@ private slots:
     void on_payButtonB_clicked();
 
     void on_buttonExit_clicked();
+
+    void on_visaButton_clicked();
+
+    void on_masterCardButton_clicked();
+
+    void on_discoverButton_clicked();
+
+    void on_amExpressButton_clicked();
 
 private:
     Ui::MainWindow *ui;

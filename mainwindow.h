@@ -4,15 +4,15 @@
 #include <QMainWindow>
 #include <QString>
 
+const int cardType        = 1;
+const int cardVisa        = 1;
+const int cardMaster      = 2;
+const int cardAmEx        = 3;
+const int cardDiscover    = 4;
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
-
-int cardType = 1;
-int cardVisa = 1;
-int cardMaster = 2;
-int cardAmEx = 3;
-int cardDiscover = 4;
 
 class MainWindow : public QMainWindow
 {
@@ -40,11 +40,8 @@ private slots:
     void on_buttonExit_clicked();
 
     void on_visaButton_clicked();
-
     void on_masterCardButton_clicked();
-
     void on_discoverButton_clicked();
-
     void on_amExpressButton_clicked();
 
 private:

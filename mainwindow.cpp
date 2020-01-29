@@ -35,7 +35,6 @@ MainWindow::~MainWindow()
 void MainWindow::on_nameTextEdit_textChanged()
 {
     myReservation.setName(ui->nameTextEdit->toPlainText());
-    ui->testText->setText(myReservation.name());
 
     //Enable/disable next button based on name input.
     ui->nextButtonA->setEnabled(myReservation.name() != "");
@@ -48,7 +47,6 @@ void MainWindow::on_radioSizeA_clicked(bool checked)
     {
         myReservation.setType_size(sizeQueen);
         updatePeopleBounds();
-        ui->testText->setText(QString::number(myReservation.type_size()));
         updateCost();
     }
 }
@@ -58,7 +56,6 @@ void MainWindow::on_radioSizeB_clicked(bool checked)
     {
         myReservation.setType_size(sizeKing);
         updatePeopleBounds();
-        ui->testText->setText(QString::number(myReservation.type_size()));
         updateCost();
     }
 }
@@ -67,7 +64,6 @@ void MainWindow::on_radioViewA_clicked(bool checked)
     if (checked)
     {
         myReservation.setType_view(viewStandard);
-        ui->testText->setText(QString::number(myReservation.type_view()));
         updateCost();
     }
 }
@@ -76,7 +72,6 @@ void MainWindow::on_radioViewB_clicked(bool checked)
     if (checked)
     {
         myReservation.setType_view(viewAtrium);
-        ui->testText->setText(QString::number(myReservation.type_view()));
         updateCost();
     }
 }
@@ -85,13 +80,11 @@ void MainWindow::on_radioViewB_clicked(bool checked)
 void MainWindow::on_startDate_userDateChanged(const QDate &date)
 {
     myReservation.setDate(date);
-    ui->testText->setText((myReservation.date()).toString());
 }
 
 void MainWindow::on_lengthBox_valueChanged(int arg1)
 {
     myReservation.setLength(arg1);
-    ui->testText->setText(QString::number(myReservation.length()));
     updateCost();
 }
 
@@ -133,7 +126,6 @@ void MainWindow::updatePeopleBounds()
 void MainWindow::on_parkingCheck_stateChanged(int arg1)
 {
     myReservation.setParking(arg1);
-    ui->testText->setText(QString::number(myReservation.parking()));
     updateCost();
 }
 

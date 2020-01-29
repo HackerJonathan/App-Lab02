@@ -28,11 +28,8 @@ private slots:
     void on_parkingCheck_stateChanged(int arg1);
 
     void on_nextButtonA_clicked();
-
     void on_backButtonB_clicked();
-
     void on_payButtonB_clicked();
-
     void on_buttonExit_clicked();
 
 private:

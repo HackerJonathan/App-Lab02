@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="pageA">
      <widget class="QPlainTextEdit" name="nameTextEdit">
@@ -138,7 +138,250 @@
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="pageB"/>
+    <widget class="QWidget" name="pageB">
+     <widget class="QRadioButton" name="radioButton">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>240</y>
+        <width>100</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Visa</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_2">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>240</y>
+        <width>100</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>MasterCard</string>
+      </property>
+     </widget>
+     <widget class="QStackedWidget" name="windowStack_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>801</width>
+        <height>471</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="pageA_2">
+       <widget class="QPlainTextEdit" name="nameTextEdit_2">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>10</y>
+          <width>321</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QGroupBox" name="groupSize_2">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>110</y>
+          <width>251</width>
+          <height>121</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Room Size</string>
+        </property>
+        <widget class="QRadioButton" name="radioSizeA_2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>201</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>2 Queen Beds (4 People)</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="radioSizeB_2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>231</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>1 King Bed (3 People)</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>240</y>
+          <width>251</width>
+          <height>121</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Room View</string>
+        </property>
+        <widget class="QRadioButton" name="radioViewA_2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>30</y>
+           <width>201</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Standard View</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="radioViewB_2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>60</y>
+           <width>201</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Atrium View</string>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QDateEdit" name="startDate_2">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>180</y>
+          <width>110</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="calendarPopup">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="pageB_2">
+       <widget class="QRadioButton" name="visaButton">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>240</y>
+          <width>100</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Visa</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="masterCardButton">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>240</y>
+          <width>100</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>MasterCard</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="discoverButton">
+        <property name="geometry">
+         <rect>
+          <x>340</x>
+          <y>240</y>
+          <width>100</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Discover</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="amExpressButton">
+        <property name="geometry">
+         <rect>
+          <x>480</x>
+          <y>240</y>
+          <width>171</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>American Express</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>190</y>
+          <width>201</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Choose Payment Type:</string>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="cardNumber">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>340</y>
+          <width>311</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_2">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>300</y>
+          <width>131</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Enter Card Number:</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="pageC_2"/>
+     </widget>
+    </widget>
     <widget class="QWidget" name="pageC"/>
    </widget>
    <widget class="QLabel" name="testText">
@@ -170,7 +413,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>26</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>

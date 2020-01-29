@@ -70,3 +70,24 @@ void MainWindow::on_startDate_userDateChanged(const QDate &date)
     myReservation.setDate(date);
     ui->testText->setText((myReservation.date()).toString());
 }
+
+
+void MainWindow::on_visaButton_clicked()
+{
+
+}
+
+void MainWindow::on_masterCardButton_clicked()
+{
+
+}
+
+void MainWindow::on_discoverButton_clicked()
+{
+
+}
+
+void MainWindow::on_amExpressButton_clicked()
+{
+
+}

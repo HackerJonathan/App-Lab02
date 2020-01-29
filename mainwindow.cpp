@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "reservation.h"
+#include <iostream>
 
 #include <QMessageBox>
 
@@ -20,6 +21,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->startDate->setDate(QDate::currentDate());
     ui->startDate->setDateRange(QDate::currentDate(), QDate::currentDate().addYears(1));
     ui->windowStack->setCurrentIndex(0);
+
+    loadImage();
+    ui->labelLogo->setPixmap(canalLogo);
 
     updateCost();
 }
@@ -192,7 +196,18 @@ void MainWindow::on_payButtonB_clicked()
 
 //------------------------------------------------------------------------- PAGE THREE
 
+void MainWindow::loadImage() {
 
+    QString logoFileName = "canalResortLogo.png";
+   /* if (canalLogo.load(logoFileName)) {
+        canalLogo = canalLogo.scaled(ui->labelLogo->size(), Qt::KeepAspectRatioByExpanding);
+    }
+*/
+    ui->labelLogo->setPixmap(canalLogo);
+
+
+
+}
 void MainWindow::on_buttonExit_clicked()
 {
     QApplication::quit();

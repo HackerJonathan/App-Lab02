@@ -50,5 +50,7 @@ private:
     void updatePeopleBounds();
     void updateCost();
     void updateCostLabels();
+    void loadImage();
+    QPixmap canalLogo;
 };
 #endif // MAINWINDOW_H
